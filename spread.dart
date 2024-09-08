@@ -1,11 +1,8 @@
-//In spread operator we can use multiple functionality
+//In cascade operator we can merge
 void main() {
-  
-  var fruits = {}
-    ..putIfAbsent('name', () => 'wazir')
-    ..clear()..addAll({1:'wazir', 2:'tatheer', 3:'abbas', 4:'tanveer', 5:'asghar', 6:'ali'}..remove(6));
+  Map<int, String> f1 = {1: 'Apple', 2: 'Orange'};
+  var f2 = {3: 'Banana'};
+  var f3 = {4: 'Mango'};
+  var fruits = {...f1, ...f2, ...f3};
   print(fruits);
-
-  
-
 }
